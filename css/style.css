@@ -210,7 +210,11 @@ header .logo img:hover{
     text-align: center;  
     font-size: 3rem;
     color:green;
-  }
+}
+ .heading:hover{
+     
+ }
+
 .about{
     background-color:#eee;
     flex-wrap: wrap;
@@ -326,6 +330,59 @@ header .logo img:hover{
 
 
 
+/* ======footer================================ */
+/* footer */
+.footer {
+    background: url('../images/footer2.jpg') no-repeat top center ;
+    background-size:100% 100%;
+    overflow: hidden;
+  }
+  
+  .footer .box-container {
+    display: flex;
+    margin-left: 4rem;
+  }
+  .footer .box-container .box h3 {
+    font-size: 3rem;
+    padding: 2rem;
+    color: orange;
+  }
+  
+  .footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 1rem 2rem;
+  }
+  
+  .footer .box-container .box a i {
+      font-size: 2rem;
+    color: orange;
+    padding-right: 1rem;
+  }
+  .footer .box-container .box a:hover {
+    color: orange;
+  }
+  
+  .footer .box-container .box a:hover i {
+    padding-right: 2rem;
+  }
+  
+  .footer .copyright {
+    text-align: center; 
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    color: rgb(1 7 10);
+  }
+  
+
+
+
+
+
+
+
+
 @media (max-width:1200px){
 
     html{
@@ -395,5 +452,11 @@ header .logo img:hover{
     .contact .row form{
         margin:3rem 0;
     } */
+  
 
+
+    .footer .box-container .box h3 {
+        font-size: 2rem;
+    }
+    
  }
