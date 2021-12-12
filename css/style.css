@@ -326,9 +326,72 @@ header .logo img:hover{
 }
 
 
+/* Experience section */
 
 
 
+
+
+
+
+
+
+/* Education section */
+.education {
+    background: #eee;
+}
+.education .box-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    
+}
+
+.education .box-container .box{
+    width:30rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: 0.4rem solid white;
+    position: relative;
+    box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+}
+
+.education .box-container .box span{
+    font-size: 2rem;
+    font-weight: bold;
+    color:orange;
+   
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color: var(--teal3);
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.5rem;
+    color:#eee;
+    padding: 1rem 0;
+    color: teal;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top:-0.8rem; left:-1.7rem;
+    font-size: 3rem;
+    color: rgb(99, 79, 172); 
+}
+
+.education .box-container .box:hover{
+        color: white;
+        border: none;
+        box-shadow: 0 0 30px orangered;
+}
+.education .box-container .box .country{
+    padding-bottom: 2rem;
+}
 
 
 
@@ -424,6 +487,9 @@ header .logo img:hover{
 
     html{
         font-size: 50%;
+    }
+    .education .box-container{
+        padding: 1rem 10rem;   
     }
     
 
