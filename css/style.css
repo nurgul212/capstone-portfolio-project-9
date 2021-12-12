@@ -4,6 +4,14 @@
     --orange: orange;
     --black: #333;
     --teal: teal;
+    --teal2:#10221b;
+    --teal3:rgb(26, 97, 87);
+    --purple: rgb(99, 79, 172);
+    --white: #fff;
+    --bg: #eee;
+    --font-s:15px; 
+    --font-m:20px;
+    --font-l:40px;
 }
 *{
     font-family: "Open Sans", sans-serif;
@@ -13,29 +21,28 @@
     text-decoration: none;
     outline: none;
     border:none;
-    text-transform: capitalize;
     transition: all .2s linear;
 }
 *::selection{
     background:var(--orange);
-    color: #333;
+    color: var(--black);
 }
 html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
 html::-webkit-scrollbar {
-    width: 1.4rem;
+    width: 1.6rem;
 }
 html::-webkit-scrollbar-track{
     background:#222;
 }
 
 html::-webkit-scrollbar-thumb{
-    background:var(--orange);
+    background:var(--teal3);
 }
 body{
-    background:#111;
+    /* background: var(--bg); */
     overflow-x: hidden;
     padding-left: 35rem;
 }
@@ -45,8 +52,8 @@ header{
     top:0; left:0;
     z-index: 1000;
     height:100%;
-    width:30rem;
-    background:var(--black);
+    width:35rem;
+    background:var(--teal2);
     display: flex;
     align-items: center;
     padding-top: 5rem;
@@ -73,7 +80,7 @@ header .user img:hover{
 
 header .user .name{
     font-size: 2rem;
-    color:#fff;
+    color:var(--white);
 }
 header .user .name:hover{
     cursor: pointer;
@@ -143,84 +150,170 @@ header .logo img:hover{
     display: none;
 }
 
+/* home section================================== */
 .home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    padding: 0 15rem;
-    /* background: url('../images/home-pic.png') no-repeat top center ; */
+    padding: 0;
 }
-.home img{
-    width: 600px;
-    height: 500px;
-    border-radius: 5rem;
-   padding: 4rem;
-   border: 0.1rem solid rgb(233, 225, 210);
-   margin-top: 2rem;
-   
-}
-
-.home img:hover{
-    /* transform: scale(1) rotate(3deg); */
-    border: 0.2rem solid orange; 
-    animation-timing-function: 5s ease-out; 
-    cursor: pointer;
+.home .box{
+    min-height: 100vh;
+    display:flex;
+    /* align-items: center; */
+    background-size:cover !important;
+    background-position: center !important;
+    justify-content: flex-end;
+    padding: 15rem 15%; 
     
 }
-.home h1{
+
+.home .box .content{
+    width: 50rem;
+}
+.home .box .content span{
+  font-size: 4rem;
+  color: var(--orange);
+}
+.home .box .content h3{
     font-size: 5rem;
-    color: white;
-    padding: 3rem;
+    color: green;
+    text-transform: uppercase;
 }
-section{
-    min-height: 50vh;
-    padding: 1rem;
+.home .box .content p{
+   color: var(--orange);
+   font-size: 3rem; 
+   text-transform: uppercase;
 }
-.home p{
-    font-size: 4rem;
-    color: white;
-    padding: 2rem;
-}
-.btn{
+
+.home .btn{
     padding: 0.7rem 3rem;
     background: #333;
     color: white;
     cursor: pointer;
-    margin-top:1rem;
+    margin-top:7rem;
     font-size: 2rem;
     border-radius: 5rem;
 }
-.btn i{
+.home .btn i{
     padding:0 .5rem;
     font-size: 1.8rem;
-}
-.btn:hover{
+} 
+ .home .btn:hover{
     background:var(--orange);
 }
+
 .home span{
     color: var(--orange);
     font-style: italic;
 
+} 
+/* =======about section================================================== */
+.heading{
+    text-align: center;  
+    font-size: 3rem;
+    color:green;
+  }
+.about{
+    background-color:#eee;
+    flex-wrap: wrap;
+}
+.about .content{
+    padding:2rem;
 }
 
+.about .content p{
+    font-size: 2rem;
+    color: rgb(7, 88, 82);
+    padding: 1rem 0;
+}
+
+/* =======projects section================================================== */
 
 
+.projects {
+    background: #eee;
+  }
 
+.projects .box-container {
+  /* display: -ms-grid; */
+  display: grid;
+  /* -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit]; */
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 1.5rem;
+  padding: 3rem;
+}
+.projects .box-container .box {
+    height: 55rem;
+    text-align: center;
+    background: #fff;
+    border: 0.2rem solid #bedae1;
+    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
+    border-radius: 1.5rem;
+    transition: all 0.5s;
+  }
+  
+.projects .box-container .box:hover {
+    background: #10221b;
+    border: 0.3rem solid orange;
+    transform: scale(1.1);
+  }
 
+  .projects .box-container .box:hover .content > * {
+    color: #fff;
+  }
+  
+  .projects .box-container .box:hover .btn {
+    border-color: #fff;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
+  .projects .box-container .box:hover .btn:hover {
+    background: #fff;
+    color: #10221b;
+    transform: scale(1.1);
+  }
+  
+  .projects .box-container .box .image {
+    height: 35rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    border-radius: 1.5rem;
+  }
+  .projects .box-container .box .image img {
+    height: 95%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: .5rem;
+  }
+  .projects .box-container .box .content {
+    padding: 0.5rem;
+  }
+  
+  .projects .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #10221b;
+  }
+  
+  .projects .box-container .box .content p {
+    font-size: 1.5rem;
+    color: #10221b;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+  }
+ .projects .box-container .box .content .btn {
+     border: 0.2rem solid #bedae1;
+     color: #bedae1;
+     border-radius: 1rem;
+     font-size: 2rem;
+     cursor: pointer;
+     background: none;
+     padding: 1rem 2rem;
+     margin-top: 1rem;
+}
+.projects .box-container .box .content .btn:hover{
+    border:0.3rem solid orange;
+    color:rgb(8, 39, 8);
+}
 
 
 
@@ -275,15 +368,19 @@ section{
     header{
         width: 100vw;
     }
-    .home h1{
-        font-size: 3rem;
+    .home .box .content h3{
+        font-size: 3rem; 
+    }
+    .home .box .content p{
+        margin-top: 2rem;
+        font-size: 2rem;
     }
 
     .heading{
         margin:0 3rem;
     }
 
-    .about .row .counter .box{
+    /* .about .row .counter .box{
         width: 100%;
     }
  
@@ -297,6 +394,6 @@ section{
 
     .contact .row form{
         margin:3rem 0;
-    }
+    } */
 
  }
