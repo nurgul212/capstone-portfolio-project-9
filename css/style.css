@@ -47,35 +47,34 @@ header .user img{
     height:20rem;
     width:20rem;
     border-radius: 50%;
-    object-fit: cover;
     margin-bottom: 1rem;
-    border:0.2rem solid var(--orange);
+    border:0.2rem solid #5e4d1c ;
     transition: all 0.5s;
 }
 
 header .user img:hover{
     transform: scale(1.3) rotate(10deg);
-    border: 0.5rem solid red;   
+    border: 0.5rem solid var(--orange);   
 }
 
 
 header .user .name{
     font-size: 2rem;
-    color:var(--white);
+    color:var(--orange);
 }
 header .user .name:hover{
     cursor: pointer;
-    color:var(--orange);
+    color:green;
 }
 
-header .user .post{
+header .user .uyghur{
     padding-top: 1rem;
     font-size: 1.5rem;
-    color: white;
+    color: var(--orange);
 }
-header .user .post:hover{
+header .user .uyghur:hover{
     cursor: pointer;
-    color:var(--orange);
+    color: green;
 }
 header .navbar{
     width:100%;
@@ -96,10 +95,11 @@ header .navbar ul li a{
 }
 header .navbar ul li a:hover{
     background:var(--orange);
-    color: rgb(8, 39, 8);
-    /* transform: ease */
+    color: rgb(8, 39, 8); 
 
 }
+
+
 .navbar ul li a i{
     margin-right:1.3rem ;
     color:white;
@@ -111,12 +111,12 @@ header .logo img{
     border-radius: 50%;
     width:10rem;
     height: 10rem;
-    border: 0.1rem solid var(--orange);
+    border: 0.1rem solid orange;
     margin-top: 3.5rem;
 }
 header .logo img:hover{
     transform: scale(2) rotate(360deg);
-    border: 0.2rem solid red;  
+    border: 0.2rem solid var(--orange);  
 }
 #menu{
     position: fixed;
@@ -145,7 +145,6 @@ header .logo img:hover{
 .home .box{
     min-height: 100vh;
     display:flex;
-    /* align-items: center; */
     background-size:cover !important;
     background-position: center !important;
     justify-content: flex-end;
@@ -162,7 +161,7 @@ header .logo img:hover{
 }
 .home .box .content h3{
     font-size: 5rem;
-    color: green;
+    color: #036c32;
     text-transform: uppercase;
 }
 .home .box .content p{
@@ -196,9 +195,11 @@ header .logo img:hover{
 /* =======about section================================================== */
 .heading{
     padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: center;  
     font-size: 3rem;
-    color:green;
+    color:#0e7672;
+    text-transform: uppercase;
 }
  
 
@@ -226,8 +227,7 @@ header .logo img:hover{
 .projects .box-container {
   
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-/* justify-content: space-around; */
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 3rem;
   padding: 3rem;
 }
@@ -236,7 +236,6 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     text-align: center;
     background: #fff;
     border: 0.2rem solid #bedae1;
-    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
     border-radius: 1.5rem;
     transition: all 0.5s;
   }
@@ -259,6 +258,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     background: #fff;
     color: #10221b;
     transform: scale(1.1);
+    border:0.3rem solid var(--orange); 
   }
   
   .projects .box-container .box .image {
@@ -271,7 +271,6 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   .projects .box-container .box .image img {
     height: 95%;
     width: 100%;
-    /* object-fit: cover; */
     border-radius: .5rem;
   }
   .projects .box-container .box .content {
@@ -301,23 +300,84 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
      border: .1rem solid rgba(0,0,0,.2);
      box-shadow: .4rem .4rem 1rem #ccc, -.4rem -.4rem 1rem #fff; 
 }
-.projects .box-container .box .content .btn:hover{
-    border:0.3rem solid var(--orange);
-    color:rgb(8, 39, 8);
+
+
+/*========== Experience section============================================= */
+.experience{
+    padding-left: 2rem;
+    padding: 1.5rem;   
+    background-color: rgb(245, 244, 198);
+}
+.experience .slide {
+    border: 0.1rem solid orange;
+    text-align: center;
+    width: 300px;
+    height: 320px;
+    background-color: #e9ebdd;
+    border-radius: 5px;
+    background: linear-gradient(to top, rgb(86, 113, 231) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+   
+  }
+
+  .experience .slide:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(255, 45, 45);
+}
+ 
+.experience .slide:hover h2{
+    font-size: 1.8rem;
+    color: orange;
 }
 
+  .experience .slide h2{
+      font-size: 1.5rem;
+      color:rgb(26, 97, 87);
+  }
+ 
+  .experience .slide:hover .year {
+     transform: translateY(0);
+  }
 
-/* Experience section */
+  .experience .slide  img {
+    padding: 2rem;  
+  }
+  .experience .slide .year {
+    font-size: 2rem;
+    color: orange;  
+     transform: translateY(20rem);
+  }
+  
+  .experience .slide .year span {
+    font-size: 2rem;
+    font-weight: bold;
+    color:var(--orange);
+  }
+   
+  .experience .slide .content {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .experience .slide .content h3 {
+    font-size: 2rem;
+    color: #10221b;
+  }
+  
+  .experience .slide .content .duties p {
+      margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color:#b4c5c5;
+  }
+  .experience .slide:hover .content .duties p {
+    font-size: 1.5rem;   
+    color:rgb(24, 35, 97);
+ }
 
-
-
-
-
-
-
-
-
-/* Education section */
+/*====================   Education section========================= */
 .education {
     background: #eee;
 }
@@ -325,8 +385,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1rem 2rem;
-    
+    padding: 1rem 2rem;    
 }
 
 .education .box-container .box{
@@ -341,8 +400,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 .education .box-container .box span{
     font-size: 2rem;
     font-weight: bold;
-    color:var(--orange);
-   
+    color:var(--orange);   
 }
 
 .education .box-container .box h3{
@@ -368,7 +426,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 .education .box-container .box:hover{
         color: white;
         border: none; 
-        box-shadow: 0 0 30px orangered;
+        box-shadow: 0 0 30px  rgb(99, 79, 172);
 }
 .education .box-container .box .country{
     padding-bottom: 2rem;
@@ -376,16 +434,10 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 
 
 
-
-
-
-
 /* ======footer================================ */
-/* footer */
 .footer {
-    background: url('../images/footer2.jpg') no-repeat top center ;
-    background-size:100% 100%;
-    overflow: hidden;
+    background: url('../images/footer.jpg') no-repeat top center ;
+    background-size:100% 100%;  
   }
   
   .footer .box-container {
@@ -425,12 +477,6 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     color: rgb(1 7 10);
   }
   
-
-
-
-
-
-
 
 
 @media (max-width:1200px){
