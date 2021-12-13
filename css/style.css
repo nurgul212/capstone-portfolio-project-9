@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap'); */
 
 :root{
     --orange: orange;
@@ -9,9 +8,7 @@
     --purple: rgb(99, 79, 172);
     --white: #fff;
     --bg: #eee;
-    --font-s:15px; 
-    --font-m:20px;
-    --font-l:40px;
+    
 }
 *{
     font-family: "Open Sans", sans-serif;
@@ -23,26 +20,13 @@
     border:none;
     transition: all .2s linear;
 }
-*::selection{
-    background:var(--orange);
-    color: var(--black);
-}
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
-html::-webkit-scrollbar {
-    width: 2rem;
-}
-html::-webkit-scrollbar-track{
-    background: white;
-}
 
-html::-webkit-scrollbar-thumb{
-    background: orange;
-}
 body{
-    /* background: var(--bg); */
     overflow-x: hidden;
     padding-left: 35rem;
 }
@@ -50,14 +34,12 @@ body{
 header{
     position: fixed;
     top:0; left:0;
-    z-index: 1000;
     height:100%;
     width:35rem;
     background:var(--teal2);
     display: flex;
     align-items: center;
     padding-top: 5rem;
-    /* justify-content: center; */
     flex-flow: column;
     text-align: center;
 }
@@ -72,7 +54,6 @@ header .user img{
 }
 
 header .user img:hover{
-    /* transform: scale(1.2) rotate(360deg); */
     transform: scale(1.3) rotate(10deg);
     border: 0.5rem solid red;   
 }
@@ -135,7 +116,6 @@ header .logo img{
 }
 header .logo img:hover{
     transform: scale(2) rotate(360deg);
-    /* transform: scale(1.3) rotate(30deg); */
     border: 0.2rem solid red;  
 }
 #menu{
@@ -153,7 +133,7 @@ header .logo img:hover{
 }
 
 #menu:hover{
-    color: orange;
+    color: var(--orange);
     background: rgb(105, 104, 101);
     transform: scale(1.1);
 }
@@ -215,6 +195,7 @@ header .logo img:hover{
 } 
 /* =======about section================================================== */
 .heading{
+    padding-top: 2rem;
     text-align: center;  
     font-size: 3rem;
     color:green;
@@ -262,7 +243,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   
 .projects .box-container .box:hover {
     background: #10221b;
-    border: 0.3rem solid orange;
+    border: 0.3rem solid var(--orange);
     transform: scale(1.1);
   }
 
@@ -272,6 +253,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   
   .projects .box-container .box:hover .btn {
     border-color: #fff;
+    box-shadow: 
   }
 
   .projects .box-container .box:hover .btn:hover {
@@ -290,8 +272,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   .projects .box-container .box .image img {
     height: 95%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    /* object-fit: cover; */
     border-radius: .5rem;
   }
   .projects .box-container .box .content {
@@ -311,7 +292,6 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     line-height: 1.5;
   }
  .projects .box-container .box .content .btn {
-     border: 0.2rem solid #bedae1;
      color: #bedae1;
      border-radius: 1rem;
      font-size: 2rem;
@@ -319,9 +299,11 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
      background: none;
      padding: 1rem 2rem;
      margin-top: 1rem;
+     border: .1rem solid rgba(0,0,0,.2);
+     box-shadow: .4rem .4rem 1rem #ccc, -.4rem -.4rem 1rem #fff; 
 }
 .projects .box-container .box .content .btn:hover{
-    border:0.3rem solid orange;
+    border:0.3rem solid var(--orange);
     color:rgb(8, 39, 8);
 }
 
@@ -360,7 +342,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 .education .box-container .box span{
     font-size: 2rem;
     font-weight: bold;
-    color:orange;
+    color:var(--orange);
    
 }
 
@@ -386,7 +368,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 
 .education .box-container .box:hover{
         color: white;
-        border: none;
+        border: none; 
         box-shadow: 0 0 30px orangered;
 }
 .education .box-container .box .country{
@@ -414,7 +396,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   .footer .box-container .box h3 {
     font-size: 3rem;
     padding: 2rem;
-    color: orange;
+    color: var(--orange);
   }
   
   .footer .box-container .box a {
@@ -426,11 +408,11 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   
   .footer .box-container .box a i {
       font-size: 2rem;
-    color: orange;
+    color: var(--orange);
     padding-right: 1rem;
   }
   .footer .box-container .box a:hover {
-    color: orange;
+    color: var(--orange);
   }
   
   .footer .box-container .box a:hover i {
@@ -520,28 +502,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
         width:100%;
         border-right: 0;
     }
-    /* .about .row .counter .box{
-        width: 100%;
-    }
- 
-    .education .box-container .box{
-        width:100%;
-    }
-
-    .portfolio .box-container .box{
-        width:100%;
-    }
-
-    .contact .row form{
-        margin:3rem 0;
-    } */
-  
-   /* .footer{
-       margin-left: 2rem;
-       margin-right: 2rem;
-       
-   } */
-   
+    
     .footer .box-container .box h3 {
         font-size: 2rem;
     }
