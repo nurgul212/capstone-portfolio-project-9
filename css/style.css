@@ -169,22 +169,22 @@ header .logo img:hover{
    color: var(--orange);
    font-size: 3rem; 
    text-transform: uppercase;
+   padding-bottom: 4rem;
 }
 
-.home .btn{
+.home .box .content .btn{
     padding: 0.7rem 3rem;
     background: #333;
     color: white;
     cursor: pointer;
-    margin-top:7rem;
     font-size: 2rem;
     border-radius: 5rem;
 }
-.home .btn i{
+.home .box .content .btn i{
     padding:0 .5rem;
     font-size: 1.8rem;
 } 
- .home .btn:hover{
+.home .box .content .btn:hover{
     background:var(--orange);
 }
 
@@ -253,7 +253,6 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   
   .projects .box-container .box:hover .btn {
     border-color: #fff;
-    box-shadow: 
   }
 
   .projects .box-container .box:hover .btn:hover {
@@ -456,7 +455,7 @@ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 
     .header.active{
         left: 0%;
-        transition: 0.5 linear;
+        transition: 0.5s linear;
     }
     
     #menu{
