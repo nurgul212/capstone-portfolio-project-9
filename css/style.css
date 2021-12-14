@@ -35,8 +35,10 @@ body{
 header{
     position: fixed;
     top:0; left:0;
+    right: 0px;
     height:100%;
     width:35rem;
+    z-index: 1000;
     background:var(--teal2);
     display: flex;
     align-items: center;
