@@ -30,6 +30,7 @@ body{
     overflow-x: hidden;
     padding-left: 35rem;
 }
+/* ======header================================ */
 
 header{
     position: fixed;
@@ -87,7 +88,7 @@ header .navbar ul li a{
     display: block;
     padding:1rem;
     margin:1.5rem 3rem;
-    background:rgb(59, 54, 110);
+    background:rgb(66 58 149);
     color:#fff;
     font-size: 1.8rem;
     border-radius: 5rem;
@@ -98,7 +99,6 @@ header .navbar ul li a:hover{
     color: rgb(8, 39, 8); 
 
 }
-
 
 .navbar ul li a i{
     margin-right:1.3rem ;
@@ -119,14 +119,13 @@ header .logo img:hover{
     border: 0.2rem solid var(--orange);  
 }
 #menu{
-    position: fixed;
-    top:3rem; right:2rem;
+    font-size: 4.5rem;
     background: rgb(105, 104, 101);
     color:#fff;
+    position: fixed;
+    top:3rem; right:3rem;
     cursor: pointer;
-    font-size: 4.5rem;
     padding:1rem 1.5rem;
-    z-index: 1000;
     display: none;
     border-radius: 5px;
     transition: all .5s;
@@ -192,9 +191,9 @@ header .logo img:hover{
     font-style: italic;
 
 } 
-/* =======about section================================================== */
+/* =======about + skills section================================================== */
 .heading{
-    padding-top: 2rem;
+    padding-top: 3rem;
     padding-bottom: 2rem;
     text-align: center;  
     font-size: 3rem;
@@ -204,9 +203,11 @@ header .logo img:hover{
  
 
 .about{
-    background-color:#eee;
+    background-color:rgb(238, 238, 238);
     flex-wrap: wrap;
+    align-items: center;
 }
+
 .about .content{
     padding:2rem;
 }
@@ -216,9 +217,31 @@ header .logo img:hover{
     color: rgb(7, 88, 82);
     padding: 1rem 0;
 }
+.about .skills{
+    text-align: center;
+    color:  #0bbf53;
+    font-size: 2.5rem;   
+}
+ .about hr.line {
+     margin-top: 1rem;
+    border: 0.3rem double orange;
+    width: 100%;
+     
+  }
+  .about svg{
+      display: inline-block;
+      margin: 1rem;
+  }
+  .about .svg-container{
+     text-align: center;
+     background-color: rgb(149 209 211);
+  }
+
+  .about svg:hover{
+      transform: scale(1.2);
+}
 
 /* =======projects section================================================== */
-
 
 .projects {
     background: #eee;
@@ -309,7 +332,7 @@ header .logo img:hover{
     background-color: rgb(245, 244, 198);
 }
 .experience .slide {
-    border: 0.1rem solid orange;
+    border: 0.1rem solid rgb(149 209 211);
     text-align: center;
     width: 300px;
     height: 320px;
@@ -348,7 +371,7 @@ header .logo img:hover{
   .experience .slide .year {
     font-size: 2rem;
     color: orange;  
-     transform: translateY(20rem);
+    transform: translateY(20rem);
   }
   
   .experience .slide .year span {
@@ -364,8 +387,8 @@ header .logo img:hover{
   
   .experience .slide .content h3 {
     font-size: 2rem;
-    color: #10221b;
-  }
+    color: #10221b; 
+  } 
   
   .experience .slide .content .duties p {
       margin-top: 0.5rem;
@@ -378,7 +401,7 @@ header .logo img:hover{
  }
 
 /*====================   Education section========================= */
-.education {
+ .education {
     background: #eee;
 }
 .education .box-container{
@@ -391,7 +414,7 @@ header .logo img:hover{
 .education .box-container .box{
     width:30rem;
     margin:4rem 1rem;
-    padding-left: 4rem;
+    padding-left: 2rem;
     border-left: 1.5rem solid white;
     position: relative;
     box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
@@ -417,8 +440,8 @@ header .logo img:hover{
 }
 
 .education .box-container .box i{
-    position: absolute;
-    top:-0.8rem; left:-2.6rem;
+    position: absolute; 
+    top:-0.8rem; left:-2.6rem;  
     font-size: 3rem;
     color: rgb(99, 79, 172); 
 }
@@ -431,6 +454,7 @@ header .logo img:hover{
 .education .box-container .box .country{
     padding-bottom: 2rem;
 }
+
 
 
 
@@ -478,11 +502,20 @@ header .logo img:hover{
   }
   
 
-
-@media (max-width:1200px){
+/* ======Media Queries================================ */
+@media (max-width:1024px){
+    header{
+        left:0%; 
+    }
 
     html{
         font-size: 55%;
+    }
+    body{
+        padding:0;
+    }
+    header .active{
+        left:0%;
     }
 
     .home{
@@ -493,16 +526,15 @@ header .logo img:hover{
     }
 
 }
-@media (max-width:991px){
+@media (max-width:800px){
 
-    .header{
-        left:-100%;
+    header{
+        left:-120%;
     }
 
-    .header.active{
+    header.active{
         left: 0%;
-        transition: 0.5s linear;
-    }
+    } 
     
     #menu{
         display: initial;
@@ -511,7 +543,7 @@ header .logo img:hover{
     body{
         padding:0;
     }
-   
+    
   
  }
  @media (max-width:768px){
