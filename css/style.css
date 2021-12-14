@@ -244,6 +244,13 @@ header .logo img:hover{
       transform: scale(1.2);
 }
 
+
+.about .content .forVisitors{
+    color: red;
+    font-style: italic;
+   
+}
+
 /* =======projects section================================================== */
 
 .projects {
