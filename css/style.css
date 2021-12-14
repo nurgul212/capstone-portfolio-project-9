@@ -235,6 +235,7 @@ header .logo img:hover{
   .about .svg-container{
      text-align: center;
      background-color: rgb(149 209 211);
+     padding-left: 4rem;
   }
 
   .about svg:hover{
@@ -503,10 +504,17 @@ header .logo img:hover{
   
 
 /* ======Media Queries================================ */
-@media (max-width:1024px){
-    header{
+@media (max-width:1200px){
+    /* header{
         left:0%; 
     }
+    header.active{
+        left: 0%;
+    } 
+    
+    #menu{
+        display: initial;
+    } */
 
     html{
         font-size: 55%;
@@ -519,33 +527,34 @@ header .logo img:hover{
     }
 
     .home{
-        padding:1rem 0rem;
+        padding:0rem 0rem;
     }
     .education .box-container{
         padding: 1rem 5rem;   
     }
 
 }
-@media (max-width:800px){
 
+@media(max-width: 1024px){
     header{
         left:-120%;
     }
-
-    header.active{
-        left: 0%;
-    } 
-    
+ 
     #menu{
-        display: initial;
+        display: block;
     }
-
+ 
+    header.active{
+     left:0%;
+    }
+ 
     body{
         padding:0;
     }
-    
-  
- }
+ 
+}
+
+
  @media (max-width:768px){
 
     html{
